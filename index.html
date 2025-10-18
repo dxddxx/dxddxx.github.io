@@ -1,77 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dx • Personal Homepage</title>
-  <style>
-    :root {
-      --bg: #0d1117;
-      --fg: #e6edf3;
-      --accent: #58a6ff;
-      --muted: #8b949e;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      line-height: 1.6;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      font-weight: 400;
-      color: var(--muted);
-      margin-top: 0;
-    }
-    .links {
-      margin-top: 1.5em;
-    }
-    .links a {
-      text-decoration: none;
-      color: var(--accent);
-      margin: 0 0.75em;
-      transition: color 0.2s ease;
-    }
-    .links a:hover {
-      color: #9ecbff;
-    }
-    footer {
-      position: absolute;
-      bottom: 1em;
-      color: var(--muted);
-      font-size: 0.85em;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dx — Personal Homepage</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f;  /* red accent */
+            --bg-light: #f9fafc;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.25rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .project {
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-color);
+            padding: 1rem 1.25rem;
+            border-radius: 4px;
+            background: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .links a {
+            display: inline-block;
+            margin-right: 1rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 0.4rem 0.7rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .links a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+                margin: 1rem;
+            }
+
+            header {
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+
+            .links a {
+                display: block;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <main>
-    <h1>dx</h1>
-    <h2>developer • tinkerer • builder</h2>
-    <p>Welcome to my corner of the web! I like coding things that make life a bit easier.</p>
-    <div class="links">
-      <a href="https://github.com/dx">GitHub</a>
-      <a href="mailto:dx@example.com">Email</a>
-      <a href="https://linkedin.com/in/dx">LinkedIn</a>
-    </div>
-  </main>
+    <header>
+        dx
+    </header>
 
-  <footer>
-    © <span id="year"></span> dx
-  </footer>
+    <main>
+        <section id="intro">
+            <h2>Welcome</h2>
+            <p>Hello! I'm <strong>dx</strong>, a developer interested in clean design, efficient code, and creative technology projects.</p>
+        </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>TeXicode</h3>
+                <p>TeXicode is a lightweight framework that enables embedding and rendering of LaTeX-styled mathematical expressions directly inside code environments or web editors. It streamlines the workflow for developers and researchers who frequently mix programming with mathematical notation.</p>
+                <div class="links">
+                    <a href="https://texicode.dx512.com" target="_blank">Website</a>
+                    <a href="https://github.com/dxddxx/TeXicode" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 dx. All rights reserved.
+    </footer>
 </body>
 </html>
