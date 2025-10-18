@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dx • Personal Homepage</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --accent: #58a6ff;
+      --muted: #8b949e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 0;
+    }
+    .links {
+      margin-top: 1.5em;
+    }
+    .links a {
+      text-decoration: none;
+      color: var(--accent);
+      margin: 0 0.75em;
+      transition: color 0.2s ease;
+    }
+    .links a:hover {
+      color: #9ecbff;
+    }
+    footer {
+      position: absolute;
+      bottom: 1em;
+      color: var(--muted);
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>dx</h1>
+    <h2>developer • tinkerer • builder</h2>
+    <p>Welcome to my corner of the web! I like coding things that make life a bit easier.</p>
+    <div class="links">
+      <a href="https://github.com/dx">GitHub</a>
+      <a href="mailto:dx@example.com">Email</a>
+      <a href="https://linkedin.com/in/dx">LinkedIn</a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> dx
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
